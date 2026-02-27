@@ -1,79 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chauhan Clinic | Secure Login</title>
+    <title>Chauhan Clinic | Dashboard</title>
 
     <style>
         body {
             margin: 0;
-            padding: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #000000, #1a1a1a);
-            height: 100vh;
+            background-color: #0f0f0f;
+            color: white;
+        }
+
+        /* Top Navbar */
+        .navbar {
+            background-color: #111;
+            padding: 15px 30px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            border-bottom: 1px solid #222;
         }
 
-        .login-box {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(10px);
-            padding: 40px;
-            width: 350px;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.6);
-            text-align: center;
-            color: white;
+        .navbar h2 {
+            margin: 0;
+            color: #00bfff;
         }
 
-        .login-box h1 {
-            margin-bottom: 5px;
+        /* Sidebar */
+        .sidebar {
+            width: 220px;
+            height: 100vh;
+            background-color: #141414;
+            position: fixed;
+            padding-top: 30px;
         }
 
-        .login-box p {
-            font-size: 14px;
-            color: #cccccc;
-        }
-
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 12px;
-            margin: 12px 0;
-            border-radius: 6px;
-            border: none;
-            outline: none;
-        }
-
-        input[type="submit"] {
-            width: 100%;
-            padding: 12px;
-            background-color: #007BFF;
-            border: none;
-            color: white;
-            font-size: 16px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-
-        .footer-text {
-            font-size: 12px;
-            margin-top: 15px;
-            color: #aaaaaa;
-        }
-
-        a {
+        .sidebar a {
+            display: block;
+            padding: 15px 25px;
+            color: #ccc;
             text-decoration: none;
-            color: #4da6ff;
-            font-size: 13px;
+            transition: 0.3s;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .sidebar a:hover {
+            background-color: #00bfff;
+            color: black;
+        }
+
+        /* Main Content */
+        .main {
+            margin-left: 220px;
+            padding: 30px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #1c1c1c;
+            padding: 25px;
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background-color: #222;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            color: #00bfff;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 13px;
+            color: #888;
         }
 
     </style>
@@ -82,27 +91,51 @@
 
 <body>
 
-    <div class="login-box">
+    <div class="navbar">
+        <h2>🏥 Chauhan Clinic Dashboard</h2>
+        <div>Welcome, Admin</div>
+    </div>
 
-        <h1>🏥 Chauhan Clinic</h1>
-        <p>Secure Admin Login</p>
+    <div class="sidebar">
+        <a href="#">🏠 Dashboard</a>
+        <a href="#">➕ Add Patient</a>
+        <a href="#">👁 View Patients</a>
+        <a href="#">📅 Appointments</a>
+        <a href="#">💰 Billing</a>
+        <a href="#">📊 Reports</a>
+        <a href="#">🚪 Logout</a>
+    </div>
 
-        <form action="dashboard.html" method="post">
+    <div class="main">
+        <h1>Dashboard Overview</h1>
 
-            <input type="text" name="username" placeholder="Enter Username" required>
+        <div class="cards">
 
-            <input type="password" name="password" placeholder="Enter Password" required>
+            <div class="card">
+                <h3>Total Patients</h3>
+                <p>120</p>
+            </div>
 
-            <input type="submit" value="Login">
+            <div class="card">
+                <h3>Appointments Today</h3>
+                <p>15</p>
+            </div>
 
-        </form>
+            <div class="card">
+                <h3>Pending Bills</h3>
+                <p>5</p>
+            </div>
 
-        <div class="footer-text">
-            🔒 Authorized Staff Only
+            <div class="card">
+                <h3>Total Revenue</h3>
+                <p>₹25,000</p>
+            </div>
+
         </div>
 
-        <br>
-        <a href="index.html">⬅ Back to Home</a>
+        <div class="footer">
+            © 2026 Chauhan Clinic Management System
+        </div>
 
     </div>
 
