@@ -1,16 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinic Management System</title>
+    <title>Chauhan Clinic | Secure Login</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #000000, #1a1a1a);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            width: 350px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+            text-align: center;
+            color: white;
+        }
+
+        .login-box h1 {
+            margin-bottom: 5px;
+        }
+
+        .login-box p {
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .footer-text {
+            font-size: 12px;
+            margin-top: 15px;
+            color: #aaaaaa;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4da6ff;
+            font-size: 13px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+
 </head>
+
 <body>
-    <DIV>
-        <h1></h1>
-        <h1></h1>
-        <h1></h1>
-        <h1></h1>
-    </DIV>
+
+    <div class="login-box">
+
+        <h1>🏥 Chauhan Clinic</h1>
+        <p>Secure Admin Login</p>
+
+        <form action="dashboard.html" method="post">
+
+            <input type="text" name="username" placeholder="Enter Username" required>
+
+            <input type="password" name="password" placeholder="Enter Password" required>
+
+            <input type="submit" value="Login">
+
+        </form>
+
+        <div class="footer-text">
+            🔒 Authorized Staff Only
+        </div>
+
+        <br>
+        <a href="index.html">⬅ Back to Home</a>
+
+    </div>
+
 </body>
 </html>
